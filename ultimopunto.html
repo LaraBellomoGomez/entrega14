@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teclado y colores</title>
+</head>
+<body>
+
+    <!-- Div principal -->
+    <div id="key" style="width:200px; height:200px; background-color:white; border:1px solid black;"></div>
+
+    <script>
+        // Variable global para guardar el color
+        var colorActual = "";
+
+        document.addEventListener("keydown", function (event) {
+
+            var divKey = document.getElementById("key");
+
+            if (event.key === "a") {
+                colorActual = "pink";
+                divKey.style.backgroundColor = colorActual;
+
+            } else if (event.key === "s") {
+                colorActual = "orange";
+                divKey.style.backgroundColor = colorActual;
+
+            } else if (event.key === "d") {
+                colorActual = "lightblue";
+                divKey.style.backgroundColor = colorActual;
+
+            } else if (event.key === "q") {
+                crearDiv("purple");
+
+            } else if (event.key === "w") {
+                crearDiv("gray");
+
+            } else if (event.key === "e") {
+                crearDiv("brown");
+            }
+        });
+
+        function crearDiv(color) {
+            var nuevoDiv = document.createElement("div");
+            nuevoDiv.style.width = "200px";
+            nuevoDiv.style.height = "200px";
+            nuevoDiv.style.backgroundColor = color;
+            nuevoDiv.style.border = "1px solid black";
+            document.body.appendChild(nuevoDiv);
+        }
+    </script>
+
+</body>
+</html>
