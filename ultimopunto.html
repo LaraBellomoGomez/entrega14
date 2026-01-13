@@ -6,16 +6,16 @@
 </head>
 <body>
 
-    <!-- Div principal -->
+   
     <div id="key" style="width:200px; height:200px; background-color:white; border:1px solid black;"></div>
 
     <script>
-        // Variable global para guardar el color
-        var colorActual = "";
+      
+        let colorActual = "";
 
         document.addEventListener("keydown", function (event) {
 
-            var divKey = document.getElementById("key");
+            let divKey = document.getElementById("key");
 
             if (event.key === "a") {
                 colorActual = "pink";
@@ -41,7 +41,7 @@
         });
 
         function crearDiv(color) {
-            var nuevoDiv = document.createElement("div");
+            let nuevoDiv = document.createElement("div");
             nuevoDiv.style.width = "200px";
             nuevoDiv.style.height = "200px";
             nuevoDiv.style.backgroundColor = color;
